@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up And login </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main">
+        <input type="checkbox" id="chk" aria-hidden="true">
+        <div class="signup">
+            <form onsubmit="signup(event)">
+                <label>Sign up</label>
+                <input type="email" id="email" placeholder="enter your email" required><br><br>
+                <input type="password" class="password"  id="password" placeholder="enter your password" required><br><br>
+                <button class="btn" type="submit">Sign up</button>
+            </form>
+        </div>
+        <div class="login">
+            <form onsubmit="Login(event)">
+                <label for="chk">login</label>
+                <input type="email" name="email" id="login_email" placeholder="enter your email" required>
+                <input type="password" name="password" id="login_password" placeholder="enter your password" required>
+                <button type="submit" class="btn">login</button>
+                <button onclick="logout()" class="btn">logout</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    
+    
+    <script src= "https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src= "https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+
+
+    <script>
+     const firebaseConfig = {
+    apiKey: "AIzaSyCIJyk9ukB0aI0TsvMltNbxb0rgRcVLuTs",
+    authDomain: "working-8ce12.firebaseapp.com",
+    projectId: "working-8ce12",
+    storageBucket: "working-8ce12.appspot.com",
+    messagingSenderId: "886479536788",
+    appId: "1:886479536788:web:55e5627905638c324cea81",
+    measurementId: "G-MXZCZM74KF"
+  };
+
+       
+
+
+  firebase.initializeApp(firebaseConfig);
+    </script>
+    
+</body>
+</html>
